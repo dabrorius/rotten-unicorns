@@ -129,3 +129,27 @@ body {
 .gist__social .fa-envelope {
   color: #333;
 }
+
+.bands {
+  background-color: #333;
+  padding-bottom: 3em;
+}
+
+.bands h2 {
+  color: #fafafa;
+  font-size: 1.5em;
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.bands__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bands__list img {
+  max-width: 20em;
+  max-height: 10em;
+}
