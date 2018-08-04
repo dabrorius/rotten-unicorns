@@ -110,6 +110,12 @@ body {
   justify-content: space-around;
 }
 
+@media (max-width: 42em) {
+  .gist__social {
+    font-size: 3.5em;
+  }
+}
+
 .gist__social a {
   text-decoration: none;
 }
@@ -151,8 +157,8 @@ body {
 }
 
 .bands__list a {
-  max-width: 20em;
-  max-height: 10em;
+  width: 20em;
+  height: 10em;
   padding: 2em;
 }
 
@@ -214,7 +220,7 @@ body {
 .form h2 {
   color: #922f2f;
   background-color: #111111;
-  font-size: 1em;
+  font-size: 1.25em;
   display: inline-block;
   padding: 0.1em 0.25em;
   margin: 2em 0 1em 0;
@@ -227,8 +233,50 @@ body {
   display: flex;
 }
 
+@media (max-width: 42em) {
+  .form__row {
+    flex-direction: column;
+  }
+}
+
 .form__field {
   width: 100%;
   box-sizing: border-box;
   padding: 1em;
+}
+
+.footer {
+  margin: 5em 0 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer .fa-facebook:hover {
+  color: #3b5998;
+}
+
+.footer .fa-youtube:hover {
+  color: red;
+}
+
+.footer .fa-envelope:hover {
+  color: black;
+}
+
+.footer > div {
+  padding: 0 0.5em;
+}
+
+.footer__social {
+  width: 4em;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25em;
+  border-left: 1px solid #999;
 }
