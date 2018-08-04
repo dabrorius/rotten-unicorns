@@ -201,7 +201,6 @@ body {
   border-color: black;
   background-color: #efefef;
   outline: none;
-  -webkit-appearance: none;
 }
 
 .form label {
@@ -218,6 +217,7 @@ body {
   cursor: pointer;
   border: none;
   box-shadow: 5px 5px 5px #ccc;
+  -webkit-appearance: none;
 }
 
 .form h2 {
