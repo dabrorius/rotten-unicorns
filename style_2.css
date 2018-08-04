@@ -29,17 +29,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: #557992;
   animation: fadeBackground 25s linear infinite;
 }
 
 @media (max-width: 42em) {
   .header {
+    padding: 1em;
     flex-direction: column;
     justify-content: space-around;
     height: 30em;
-    padding: 1em 0;
     box-sizing: border-box;
   }
 }
@@ -52,6 +51,7 @@ body {
   .header__logo {
     width: 100%;
     height: auto;
+    max-height: 18em;
   }
 }
 
@@ -215,6 +215,8 @@ body {
   padding: 0.75em 2em;
   text-transform: uppercase;
   cursor: pointer;
+  border: none;
+  box-shadow: 5px 5px 5px #ccc;
 }
 
 .form h2 {
@@ -224,6 +226,14 @@ body {
   display: inline-block;
   padding: 0.1em 0.25em;
   margin: 2em 0 1em 0;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+@media (max-width: 42em) {
+  .form h2 {
+    padding: 0.25em 0.5em;
+    margin: 2em 0.5em 1em;
+  }
 }
 
 .form input:hover[type="submit"] {
@@ -252,6 +262,14 @@ body {
   align-items: center;
 }
 
+@media (max-width: 42em) {
+  .footer {
+    flex-direction: column;
+    height: 4em;
+    justify-content: space-between;
+  }
+}
+
 .footer a {
   color: #333;
   text-decoration: none;
@@ -277,6 +295,13 @@ body {
   width: 4em;
   display: flex;
   justify-content: space-between;
-  font-size: 1.25em;
-  border-left: 1px solid #999;
+  font-size: 2em;
+}
+
+@media (min-width: 42em) {
+  .footer__social {
+    border-left: 1px solid #999;
+    font-size: 1.25em;
+    width: 4em;
+  }
 }
