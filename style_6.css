@@ -31,11 +31,13 @@ body {
   align-items: center;
   background-color: #557992;
   animation: fadeBackground 25s linear infinite;
+  padding-bottom: 6vw;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
 }
 
 @media (max-width: 42em) {
   .header {
-    padding: 1em;
+    padding: 1em 1em calc(1em + 6vw) 1em;
     flex-direction: column;
     justify-content: space-around;
     height: 30em;
