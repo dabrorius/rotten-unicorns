@@ -165,10 +165,11 @@ body {
 .bands__list img {
   width: 100%;
   height: 100%;
+  transition: transform 0.1s ease-in-out;
 }
 
 .bands__list img:hover {
-  transform: rotate(5deg);
+  transform: scale(1.1);
 }
 
 .form {
