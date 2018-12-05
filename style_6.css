@@ -16,6 +16,42 @@
   }
 }
 
+@keyframes fadeBackgroundTransparent {
+  0% {
+    background-color: #55799233;
+  }
+  25% {
+    background-color: #8c559233;
+  }
+  50% {
+    background-color: #92555533;
+  }
+  75% {
+    background-color: #74925533;
+  }
+  100% {
+    background-color: #55799233;
+  }
+}
+
+@keyframes fadeTextColor {
+  0% {
+    color: #2689c7;
+  }
+  25% {
+    color: #b426c6;
+  }
+  50% {
+    color: #c92323;
+  }
+  75% {
+    color: #7ac721;
+  }
+  100% {
+    color: #2689c7;
+  }
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -33,6 +69,7 @@ body {
   animation: fadeBackground 25s linear infinite;
   padding-bottom: 6vw;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
 }
 
 @media (max-width: 42em) {
@@ -140,7 +177,9 @@ body {
 
 .bands {
   background-color: #333;
-  padding-bottom: 3em;
+  padding: 6vw 0 calc(6vw + 1em);
+  clip-path: polygon(0 6vw, 100% 0, 100% 100%, 0 calc(100% - 6vw));
+  -webkit-clip-path: polygon(0 6vw, 100% 0, 100% 100%, 0 calc(100% - 6vw));
 }
 
 .bands h2 {
@@ -197,13 +236,14 @@ body {
   width: 100%;
   font-size: 1em;
   box-sizing: border-box;
-  padding: 0.5em 0.2;
+  padding: 0.5em 0.5em;
 }
 
 .form input:focus:not([type="submit"]) {
   border-color: black;
   background-color: #efefef;
   outline: none;
+  animation: fadeBackgroundTransparent 25s linear infinite;
 }
 
 .form label {
@@ -212,7 +252,9 @@ body {
 }
 
 .form input[type="submit"] {
-  color: #922f2f;
+  color: #557992;
+  animation: fadeTextColor 25s linear infinite;
+  transition: transform 0.1s ease-in-out;
   background-color: #111111;
   font-size: 1.25em;
   padding: 0.75em 2em;
@@ -224,11 +266,11 @@ body {
 }
 
 .form h2 {
-  color: #922f2f;
+  color: #ffffff;
   background-color: #111111;
   font-size: 1.25em;
   display: inline-block;
-  padding: 0.1em 0.25em;
+  padding: 0.1em 0.75em;
   margin: 2em 0 1em 0;
   box-shadow: 5px 5px 5px #ccc;
 }
@@ -241,7 +283,7 @@ body {
 }
 
 .form input:hover[type="submit"] {
-  color: red;
+  transform: scale(1.1);
 }
 .form__row {
   display: flex;
