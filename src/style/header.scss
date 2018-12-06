@@ -33,29 +33,24 @@
     height: 15em;
   }
 
+  &__text {
+    height: 8em;
+    position: relative;
+    top: 1em;
+  }
+
   @media (max-width: 42em) {
     &__logo {
       width: 100%;
       height: auto;
-      max-height: 18em;
+      max-height: 16em;
     }
-  }
 
-  &__text {
-    height: 8em;
-  }
-
-  @media (min-width: 42em) {
-    &__text {
-      position: relative;
-      top: 1em;
-    }
-  }
-
-  @media (max-width: 42em) {
     &__text {
       width: 100%;
       height: auto;
+      max-height: 8em;
+      top: 0;
     }
   }
 }
