@@ -111,12 +111,12 @@
   }
 
   @media (max-width: 42em) {
-    &_row {
+    &__row {
       flex-direction: column;
     }
   }
 
-  &_field {
+  &__field {
     width: 100%;
     box-sizing: border-box;
     padding: 1em;
