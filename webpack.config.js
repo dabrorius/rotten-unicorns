@@ -27,7 +27,8 @@ module.exports = {
       filename: "style.[hash].css"
     }),
     new CopyWebpackPlugin([
-      { from: "src/images/*", to: "./images/", flatten: true }
+      { from: "src/images/*", to: "./images/", flatten: true },
+      { from: "src/CNAME", to: "./CNAME", toType: "file" }
     ])
   ]
 };
