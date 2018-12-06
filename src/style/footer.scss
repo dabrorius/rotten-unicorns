@@ -1,0 +1,50 @@
+.footer {
+  margin: 5em 0 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .fa-facebook:hover {
+    color: #3b5998;
+  }
+
+  .fa-youtube:hover {
+    color: red;
+  }
+
+  .fa-envelope:hover {
+    color: black;
+  }
+
+  > div {
+    padding: 0 0.5em;
+  }
+
+  &__social {
+    width: 4em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+  }
+
+  @media (min-width: 42em) {
+    &__social {
+      border-left: 1px solid #999;
+      font-size: 1.25em;
+      width: 4em;
+    }
+  }
+}
+
+@media (max-width: 42em) {
+  .footer {
+    flex-direction: column;
+    height: 4em;
+    justify-content: space-between;
+  }
+}

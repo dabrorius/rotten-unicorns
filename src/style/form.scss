@@ -1,0 +1,124 @@
+@keyframes fadeBackgroundTransparent {
+  0% {
+    background-color: #55799233;
+  }
+  25% {
+    background-color: #8c559233;
+  }
+  50% {
+    background-color: #92555533;
+  }
+  75% {
+    background-color: #74925533;
+  }
+  100% {
+    background-color: #55799233;
+  }
+}
+
+@keyframes fadeTextColor {
+  0% {
+    color: #2689c7;
+  }
+  25% {
+    color: #b426c6;
+  }
+  50% {
+    color: #c92323;
+  }
+  75% {
+    color: #7ac721;
+  }
+  100% {
+    color: #2689c7;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  padding: 3em 0;
+
+  form {
+    width: 40em;
+  }
+
+  &__title_row {
+    display: flex;
+    justify-content: center;
+  }
+
+  input:not([type="submit"]) {
+    border: 3px solid #666;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    font-size: 1em;
+    box-sizing: border-box;
+    padding: 0.5em 0.5em;
+  }
+
+  input:focus:not([type="submit"]) {
+    border-color: black;
+    background-color: #efefef;
+    outline: none;
+    animation: fadeBackgroundTransparent 25s linear infinite;
+  }
+
+  label {
+    display: block;
+    color: #333;
+  }
+
+  input[type="submit"] {
+    color: #557992;
+    animation: fadeTextColor 25s linear infinite;
+    transition: transform 0.1s ease-in-out;
+    background-color: #111111;
+    font-size: 1.25em;
+    padding: 0.75em 2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    box-shadow: 5px 5px 5px #ccc;
+    -webkit-appearance: none;
+  }
+
+  h2 {
+    color: #ffffff;
+    background-color: #111111;
+    font-size: 1.25em;
+    display: inline-block;
+    padding: 0.1em 0.75em;
+    margin: 2em 0 1em 0;
+    box-shadow: 5px 5px 5px #ccc;
+  }
+
+  @media (max-width: 42em) {
+    h2 {
+      padding: 0.25em 0.5em;
+      margin: 2em 0.5em 1em;
+    }
+  }
+
+  input:hover[type="submit"] {
+    transform: scale(1.1);
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  @media (max-width: 42em) {
+    &_row {
+      flex-direction: column;
+    }
+  }
+
+  &_field {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+  }
+}
