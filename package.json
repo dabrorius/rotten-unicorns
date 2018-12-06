@@ -12,6 +12,6 @@
   },
   "scripts": {
     "start:dev": "webpack-dev-server",
-    "build": "webpack -p"
+    "build": "rm -r docs/ && webpack -p"
   }
 }
